@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generator</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #submit {
+        background-color: red;
+        border-radius: 10px;
+        width: 20%;
+        margin-top: 3rem;
+    }
+
+    #card {
+        margin-top: 10rem;
+        border: 1px solid black;
+        background-color: rebeccapurple;
+    }
+
+    h2 {
+        margin-right: 16rem;
+        color: darkblue;
+        margin-top: 2rem;
+
+    }
+
+    h1 {
+        color: chocolate;
+        margin-right: 9rem;
+
+    }
+
+    #card input {
+        margin-bottom: 5rem;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="card">
+            <h1>Card Generator</h1>
+            <form onsubmit="return myData()" action="result.html">
+                Name: <input type="text" id="name">
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </center>
+
+    <script>
+
+        function myData() {
+            var a = document.getElementById("name").value;
+
+            if (a == "") {
+                alert("name can not be blanck");
+                return false;
+            } else {
+                sessionStorage.setItem("name", a);
+                return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
