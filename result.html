@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>card Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
 </head>
 <style>
@@ -35,6 +37,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         text-align: center;
         align-items: center;
+        font-size: 60px;
+        color: navy;
 
     }
 
@@ -97,8 +101,41 @@
 
     <script>
 
-        var Name = sessionStorage.getItem("name") || "Not available";
-        document.write("<p> Name: " + Name + "</p>");
+        let id = document.getElementById("one");
+        var Name = sessionStorage.getItem("name");
+
+        id.innerHTML = Name;
+
+        let two = document.getElementById("two");
+        var name = sessionStorage.getItem("name");
+
+        two.innerHTML = name;
+
+
+        let three = document.getElementById("three");
+        var th = sessionStorage.getItem("name");
+
+        three.innerHTML = th;
+
+        let four = document.getElementById("four");
+        var fou = sessionStorage.getItem("name");
+
+        four.innerHTML = fou;
+
+        let five = document.getElementById("five");
+        var fiv = sessionStorage.getItem("name");
+
+        five.innerHTML = fiv;
+
+        let six = document.getElementById("six");
+        var sixth = sessionStorage.getItem("name");
+
+        six.innerHTML = sixth;
+
+        document.getElementById("one").style.fontFamily = 'Tangerine';
+        document.getElementById("two").style.fontFamily = "Sofia";
+        document.getElementById("three").style.fontFamily = "Tangerine";
+
     </script>
 </body>
 
